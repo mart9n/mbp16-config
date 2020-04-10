@@ -1,0 +1,112 @@
+2020-04-08 22:00:26,621 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute']
+2020-04-08 22:00:26,627 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'firewall_rules']
+2020-04-08 22:00:26,638 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'firewall-rules', u'list']
+2020-04-08 22:00:26,641 DEBUG    root            Running [gcloud.compute.firewall-rules.list] with arguments: []
+2020-04-08 22:00:26,775 INFO     root            Display format: "    table(
+      name,
+      network.basename(),
+      direction,
+      priority,
+      allowed[].map().firewall_rule().list():label=ALLOW,
+      denied[].map().firewall_rule().list():label=DENY,
+      disabled
+    )"
+2020-04-08 22:00:27,265 INFO     root            cache collection=compute.firewalls api_version=v1 params=[u'project', u'firewall']
+2020-04-08 22:00:27,267 INFO     ___FILE_ONLY___ NAME
+2020-04-08 22:00:27,267 INFO     ___FILE_ONLY___                     
+2020-04-08 22:00:27,267 INFO     ___FILE_ONLY___ NETWORK
+2020-04-08 22:00:27,268 INFO     ___FILE_ONLY___   
+2020-04-08 22:00:27,268 INFO     ___FILE_ONLY___ DIRECTION
+2020-04-08 22:00:27,268 INFO     ___FILE_ONLY___   
+2020-04-08 22:00:27,268 INFO     ___FILE_ONLY___ PRIORITY
+2020-04-08 22:00:27,268 INFO     ___FILE_ONLY___   
+2020-04-08 22:00:27,268 INFO     ___FILE_ONLY___ ALLOW
+2020-04-08 22:00:27,268 INFO     ___FILE_ONLY___                          
+2020-04-08 22:00:27,268 INFO     ___FILE_ONLY___ DENY
+2020-04-08 22:00:27,268 INFO     ___FILE_ONLY___   
+2020-04-08 22:00:27,268 INFO     ___FILE_ONLY___ DISABLED
+2020-04-08 22:00:27,269 INFO     ___FILE_ONLY___ 
+
+2020-04-08 22:00:27,269 INFO     ___FILE_ONLY___ default-allow-http
+2020-04-08 22:00:27,269 INFO     ___FILE_ONLY___       
+2020-04-08 22:00:27,269 INFO     ___FILE_ONLY___ default
+2020-04-08 22:00:27,269 INFO     ___FILE_ONLY___   
+2020-04-08 22:00:27,269 INFO     ___FILE_ONLY___ INGRESS
+2020-04-08 22:00:27,269 INFO     ___FILE_ONLY___     
+2020-04-08 22:00:27,269 INFO     ___FILE_ONLY___ 1000
+2020-04-08 22:00:27,269 INFO     ___FILE_ONLY___       
+2020-04-08 22:00:27,269 INFO     ___FILE_ONLY___ tcp:80,tcp:8080
+2020-04-08 22:00:27,270 INFO     ___FILE_ONLY___                      
+2020-04-08 22:00:27,270 INFO     ___FILE_ONLY___ False
+2020-04-08 22:00:27,270 INFO     ___FILE_ONLY___ 
+
+2020-04-08 22:00:27,270 INFO     ___FILE_ONLY___ default-allow-https
+2020-04-08 22:00:27,270 INFO     ___FILE_ONLY___      
+2020-04-08 22:00:27,270 INFO     ___FILE_ONLY___ default
+2020-04-08 22:00:27,270 INFO     ___FILE_ONLY___   
+2020-04-08 22:00:27,270 INFO     ___FILE_ONLY___ INGRESS
+2020-04-08 22:00:27,270 INFO     ___FILE_ONLY___     
+2020-04-08 22:00:27,270 INFO     ___FILE_ONLY___ 1000
+2020-04-08 22:00:27,271 INFO     ___FILE_ONLY___       
+2020-04-08 22:00:27,271 INFO     ___FILE_ONLY___ tcp:443,tcp:80
+2020-04-08 22:00:27,271 INFO     ___FILE_ONLY___                       
+2020-04-08 22:00:27,271 INFO     ___FILE_ONLY___ False
+2020-04-08 22:00:27,271 INFO     ___FILE_ONLY___ 
+
+2020-04-08 22:00:27,271 INFO     ___FILE_ONLY___ default-allow-icmp
+2020-04-08 22:00:27,271 INFO     ___FILE_ONLY___       
+2020-04-08 22:00:27,271 INFO     ___FILE_ONLY___ default
+2020-04-08 22:00:27,271 INFO     ___FILE_ONLY___   
+2020-04-08 22:00:27,271 INFO     ___FILE_ONLY___ INGRESS
+2020-04-08 22:00:27,272 INFO     ___FILE_ONLY___     
+2020-04-08 22:00:27,272 INFO     ___FILE_ONLY___ 65534
+2020-04-08 22:00:27,272 INFO     ___FILE_ONLY___      
+2020-04-08 22:00:27,272 INFO     ___FILE_ONLY___ icmp
+2020-04-08 22:00:27,272 INFO     ___FILE_ONLY___                                 
+2020-04-08 22:00:27,272 INFO     ___FILE_ONLY___ False
+2020-04-08 22:00:27,272 INFO     ___FILE_ONLY___ 
+
+2020-04-08 22:00:27,272 INFO     ___FILE_ONLY___ default-allow-internal
+2020-04-08 22:00:27,272 INFO     ___FILE_ONLY___   
+2020-04-08 22:00:27,272 INFO     ___FILE_ONLY___ default
+2020-04-08 22:00:27,273 INFO     ___FILE_ONLY___   
+2020-04-08 22:00:27,273 INFO     ___FILE_ONLY___ INGRESS
+2020-04-08 22:00:27,273 INFO     ___FILE_ONLY___     
+2020-04-08 22:00:27,273 INFO     ___FILE_ONLY___ 65534
+2020-04-08 22:00:27,273 INFO     ___FILE_ONLY___      
+2020-04-08 22:00:27,273 INFO     ___FILE_ONLY___ tcp:0-65535,udp:0-65535,icmp
+2020-04-08 22:00:27,273 INFO     ___FILE_ONLY___         
+2020-04-08 22:00:27,273 INFO     ___FILE_ONLY___ False
+2020-04-08 22:00:27,273 INFO     ___FILE_ONLY___ 
+
+2020-04-08 22:00:27,273 INFO     ___FILE_ONLY___ default-allow-rdp
+2020-04-08 22:00:27,273 INFO     ___FILE_ONLY___        
+2020-04-08 22:00:27,274 INFO     ___FILE_ONLY___ default
+2020-04-08 22:00:27,274 INFO     ___FILE_ONLY___   
+2020-04-08 22:00:27,274 INFO     ___FILE_ONLY___ INGRESS
+2020-04-08 22:00:27,274 INFO     ___FILE_ONLY___     
+2020-04-08 22:00:27,274 INFO     ___FILE_ONLY___ 65534
+2020-04-08 22:00:27,274 INFO     ___FILE_ONLY___      
+2020-04-08 22:00:27,274 INFO     ___FILE_ONLY___ tcp:3389
+2020-04-08 22:00:27,274 INFO     ___FILE_ONLY___                             
+2020-04-08 22:00:27,274 INFO     ___FILE_ONLY___ False
+2020-04-08 22:00:27,274 INFO     ___FILE_ONLY___ 
+
+2020-04-08 22:00:27,274 INFO     ___FILE_ONLY___ default-allow-ssh
+2020-04-08 22:00:27,275 INFO     ___FILE_ONLY___        
+2020-04-08 22:00:27,275 INFO     ___FILE_ONLY___ default
+2020-04-08 22:00:27,275 INFO     ___FILE_ONLY___   
+2020-04-08 22:00:27,275 INFO     ___FILE_ONLY___ INGRESS
+2020-04-08 22:00:27,275 INFO     ___FILE_ONLY___     
+2020-04-08 22:00:27,275 INFO     ___FILE_ONLY___ 65534
+2020-04-08 22:00:27,275 INFO     ___FILE_ONLY___      
+2020-04-08 22:00:27,275 INFO     ___FILE_ONLY___ tcp:22
+2020-04-08 22:00:27,275 INFO     ___FILE_ONLY___                               
+2020-04-08 22:00:27,275 INFO     ___FILE_ONLY___ False
+2020-04-08 22:00:27,275 INFO     ___FILE_ONLY___ 
+
+2020-04-08 22:00:27,275 INFO     ___FILE_ONLY___ 
+To show all fields of the firewall, please show in JSON format: --format=json
+To show all fields in table format, please see the examples in --help.
+
+

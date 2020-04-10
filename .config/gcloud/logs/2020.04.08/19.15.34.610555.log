@@ -1,0 +1,8 @@
+2020-04-08 19:15:34,612 DEBUG    root            Loaded Command Group: [u'gcloud', u'config']
+2020-04-08 19:15:34,617 DEBUG    root            Loaded Command Group: [u'gcloud', u'config', u'set']
+2020-04-08 19:15:34,619 DEBUG    root            Running [gcloud.config.set] with arguments: [SECTION/PROPERTY: "account", VALUE: "realmart9n"]
+2020-04-08 19:15:34,620 INFO     ___FILE_ONLY___ Updated property [core/account].
+
+2020-04-08 19:15:34,622 INFO     root            Display format: "default"
+2020-04-08 19:15:34,628 DEBUG    root            Checking for updates...
+2020-04-08 19:15:34,767 DEBUG    root            Updating notification cache...

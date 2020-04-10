@@ -1,0 +1,30 @@
+2020-04-08 22:01:23,516 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute']
+2020-04-08 22:01:23,547 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'ssh']
+2020-04-08 22:01:23,551 DEBUG    root            Running [gcloud.compute.ssh] with arguments: [[USER@]INSTANCE: "realmart9n@geodo-website"]
+2020-04-08 22:01:24,118 DEBUG    root            Errors fetching filtered aggregate list:
+[]
+2020-04-08 22:01:24,119 INFO     ___FILE_ONLY___ Unable to find an instance with name [geodo-website].
+
+2020-04-08 22:01:44,272 DEBUG    root            (gcloud.compute.ssh) Could not fetch resource:
+ - The resource 'projects/geodo-website/zones/europe-west1-b/instances/geodo-website' was not found
+Traceback (most recent call last):
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 983, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/surface/compute/ssh.py", line 163, in Run
+    instance = ssh_helper.GetInstance(client, instance_ref)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/command_lib/compute/ssh_utils.py", line 497, in GetInstance
+    return client.MakeRequests([request])[0]
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/client_adapter.py", line 99, in MakeRequests
+    errors, error_message='Could not fetch resource:')
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/utils.py", line 119, in RaiseToolException
+    RaiseException(problems, calliope_exceptions.ToolException, error_message)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/utils.py", line 131, in RaiseException
+    errors))
+ToolException: Could not fetch resource:
+ - The resource 'projects/geodo-website/zones/europe-west1-b/instances/geodo-website' was not found
+
+2020-04-08 22:01:44,277 ERROR    root            (gcloud.compute.ssh) Could not fetch resource:
+ - The resource 'projects/geodo-website/zones/europe-west1-b/instances/geodo-website' was not found
+

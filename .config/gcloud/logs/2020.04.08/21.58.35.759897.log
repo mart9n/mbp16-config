@@ -1,0 +1,11 @@
+2020-04-08 21:58:35,779 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute']
+2020-04-08 21:58:35,791 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'config_ssh']
+2020-04-08 21:58:35,794 DEBUG    root            Running [gcloud.compute.config-ssh] with arguments: []
+2020-04-08 21:58:36,355 DEBUG    root            Current SSH keys in project: [u'martinkirilov:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDvpGy1irZ8lF7fwTCdLHYP+kxPfpTE4OjBmS/UdjmNuGBFSWoahjpNTjq9FzWkxr7w2qMwOSaesbgFBonXXgbAw9Z6WCi4/oaOLmqb+wCTXcRw37G36Mshi5MAwSWHgpU+0S5C5LanHMWe6Bo2ujlG0x5XYTVGj8o21LFOgetgjMBMRCZfIemjB8zOhLyCK7TJelH3TNGW2VOsI5vdbvVm/rExdGzlpZ5s1cZUfnK9GeiYWBT5G7WyAerVU4LWFWTMZpujmP7OfzbiXzcPoaiHREFrZm37/n6AaN97Rsc6kc1jomouW9a6CjksbLcgVIJWEx6Yv6/rtpchL4rOdpy451KqT7bWFr5Lb4CimgPU+0mOLvflcFRpcfO2cvY5OSxeA9DPYKQKbQUUlZo6DttdJdjJdViyr5JxmQdjdRX59uGp1Y7sQkNISLXxALeTpzSGq85nva+oA2338PuZNVOfMUbjp0zZUHJHVk/xVXO2Uo8WPHewNnejHxDSLNGJFQ8= martinkirilov@Martins-MBP']
+2020-04-08 21:58:36,994 INFO     ___FILE_ONLY___ You should now be able to use ssh/scp with your instances.
+For example, try running:
+
+  $ ssh geodo-webserver.europe-west2-c.geodo-website
+
+
+2020-04-08 21:58:36,995 INFO     root            Display format: "default"

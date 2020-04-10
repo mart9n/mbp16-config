@@ -1,0 +1,3 @@
+2020-04-08 19:17:50,722 DEBUG    root            Loaded Command Group: [u'gcloud', u'config']
+2020-04-08 19:17:50,726 DEBUG    root            Loaded Command Group: [u'gcloud', u'config', u'set']
+2020-04-08 19:17:50,729 ERROR    root            (gcloud.config.set) argument SECTION/PROPERTY VALUE: Must be specified.

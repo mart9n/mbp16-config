@@ -1,0 +1,36 @@
+2020-04-08 19:37:13,446 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute']
+2020-04-08 19:37:13,464 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'ssh']
+2020-04-08 19:37:13,467 DEBUG    root            Running [gcloud.compute.ssh] with arguments: [[USER@]INSTANCE: "geodo-website"]
+2020-04-08 19:37:13,772 WARNING  root            The public SSH key file for gcloud does not exist.
+2020-04-08 19:37:13,772 WARNING  root            The private SSH key file for gcloud does not exist.
+2020-04-08 19:37:13,772 WARNING  root            You do not have an SSH key for gcloud.
+2020-04-08 19:37:13,772 WARNING  root            SSH keygen will be executed to generate a key.
+2020-04-08 19:37:13,772 DEBUG    root            Running command [/usr/bin/ssh-keygen -t rsa -f /Users/martinkirilov/.ssh/google_compute_engine].
+2020-04-08 19:37:13,772 DEBUG    root            Executing command: [u'/usr/bin/ssh-keygen', u'-t', u'rsa', u'-f', u'/Users/martinkirilov/.ssh/google_compute_engine']
+2020-04-08 19:37:24,744 DEBUG    root            Errors fetching filtered aggregate list:
+[]
+2020-04-08 19:37:24,744 INFO     ___FILE_ONLY___ Unable to find an instance with name [geodo-website].
+
+2020-04-08 19:37:43,771 DEBUG    root            (gcloud.compute.ssh) Could not fetch resource:
+ - The resource 'projects/geodo-website/zones/europe-north1-a/instances/geodo-website' was not found
+Traceback (most recent call last):
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 983, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/surface/compute/ssh.py", line 163, in Run
+    instance = ssh_helper.GetInstance(client, instance_ref)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/command_lib/compute/ssh_utils.py", line 497, in GetInstance
+    return client.MakeRequests([request])[0]
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/client_adapter.py", line 99, in MakeRequests
+    errors, error_message='Could not fetch resource:')
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/utils.py", line 119, in RaiseToolException
+    RaiseException(problems, calliope_exceptions.ToolException, error_message)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/utils.py", line 131, in RaiseException
+    errors))
+ToolException: Could not fetch resource:
+ - The resource 'projects/geodo-website/zones/europe-north1-a/instances/geodo-website' was not found
+
+2020-04-08 19:37:43,776 ERROR    root            (gcloud.compute.ssh) Could not fetch resource:
+ - The resource 'projects/geodo-website/zones/europe-north1-a/instances/geodo-website' was not found
+

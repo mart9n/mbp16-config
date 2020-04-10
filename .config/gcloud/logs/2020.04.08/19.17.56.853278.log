@@ -1,0 +1,526 @@
+2020-04-08 19:17:56,855 DEBUG    root            Loaded Command Group: [u'gcloud', u'config']
+2020-04-08 19:17:56,860 DEBUG    root            Loaded Command Group: [u'gcloud', u'config', u'set']
+2020-04-08 19:17:56,861 DEBUG    root            Running [gcloud.config.set] with arguments: [--help: "None"]
+2020-04-08 19:17:56,866 DEBUG    root            Loaded Command Group: [u'gcloud', u'help']
+2020-04-08 19:17:56,868 DEBUG    root            Loaded Command Group: [u'gcloud', u'topic']
+2020-04-08 19:17:56,869 DEBUG    root            Loaded Command Group: [u'gcloud', u'topic', u'gcloudignore']
+2020-04-08 19:17:56,871 DEBUG    root            Loaded Command Group: [u'gcloud', u'topic', u'configurations']
+2020-04-08 19:17:56,873 DEBUG    root            Loaded Command Group: [u'gcloud', u'config', u'list']
+2020-04-08 19:17:56,875 DEBUG    root            Loaded Command Group: [u'gcloud', u'config', u'unset']
+2020-04-08 19:17:56,876 DEBUG    root            Loaded Command Group: [u'gcloud', u'config', u'configurations']
+2020-04-08 19:17:56,877 DEBUG    root            Loaded Command Group: [u'gcloud', u'config', u'configurations', u'create']
+2020-04-08 19:17:56,878 DEBUG    root            Loaded Command Group: [u'gcloud', u'config', u'configurations', u'activate']
+2020-04-08 19:17:56,879 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth']
+2020-04-08 19:17:56,881 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth', u'list']
+2020-04-08 19:17:56,902 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute']
+2020-04-08 19:17:56,905 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'backend_services']
+2020-04-08 19:17:56,907 DEBUG    root            Loaded Command Group: [u'gcloud', u'components']
+2020-04-08 19:17:56,909 DEBUG    root            Loaded Command Group: [u'gcloud', u'components', u'repositories']
+2020-04-08 19:17:56,910 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'regions']
+2020-04-08 19:17:56,918 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'regions', u'list']
+2020-04-08 19:17:56,919 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'zones']
+2020-04-08 19:17:56,920 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'zones', u'list']
+2020-04-08 19:17:56,923 DEBUG    root            Loaded Command Group: [u'gcloud', u'topic', u'client_certificate']
+2020-04-08 19:17:56,946 INFO     ___FILE_ONLY___ [m[1mNAME[m
+    gcloud config set - set a Cloud SDK property
+
+[m[1mSYNOPSIS[m
+    [1mgcloud config set[m [4mSECTION[m/[4mPROPERTY[m [4mVALUE[m [[1m--installation[m]
+        [[4mGCLOUD_WIDE_FLAG ...[m]
+
+[m[1mDESCRIPTION[m
+    gcloud config set sets the specified property in your active configuration
+    only. A property governs the behavior of a specific aspect of Cloud SDK
+    such as the service account to use or the verbosity level of logs. To set
+    the property across all configurations, use the [1m--installation[m flag. For
+    more information regarding creating and using configurations, see [1mgcloud
+    topic configurations[m.
+
+    To view a list of properties currently in use, run [1mgcloud config list[m.
+
+    To unset properties, use [1mgcloud config unset[m.
+
+    Note, Cloud SDK comes with a [1mdefault[m configuration. To create multiple
+    configurations, use [1mgcloud config configurations create[m, and [1mgcloud config
+    configurations activate[m to switch between them.
+
+[m[1mPOSITIONAL ARGUMENTS[m
+     [4mSECTION[m/[4mPROPERTY[m
+        Property to be set. Note that SECTION/ is optional while referring to
+        properties in the core section, i.e., using either [1mcore/project[m or
+        [1mproject[m is a valid way of setting a project, while using section names
+        is essential for setting specific properties like [1mcompute/region[m.
+        Consult the Cloud SDK properties page for a comprehensive list of
+        properties: https://cloud.google.com/sdk/docs/properties
+
+     [4mVALUE[m
+        Value to be set.
+
+[m[1mFLAGS[m
+     [1m--installation[m
+        If set, the property is updated for the entire Cloud SDK installation.
+        Otherwise, by default, the property is updated only in the currently
+        active configuration.
+
+[m[1mGCLOUD WIDE FLAGS[m
+    These flags are available to all commands: --account, --billing-project,
+    --configuration, --flags-file, --flatten, --format, --help,
+    --impersonate-service-account, --log-http, --project, --quiet,
+    --trace-token, --user-output-enabled, --verbosity.
+
+    Run [1m$ gcloud help[m for details.
+
+[m[1mAVAILABLE PROPERTIES[m
+     [4mcore[m
+         [1maccount[m
+            Account [1mgcloud[m should use for authentication. Run [1mgcloud auth list[m
+            to see your currently available accounts.
+
+         [1mcustom_ca_certs_file[m
+            Absolute path to a custom CA cert file.
+
+         [1mdefault_regional_backend_service[m
+            If True, backend services in [1mgcloud compute backend-services[m will
+            be regional by default. Setting the [1m--global[m flag is required for
+            global backend services.
+
+         [1mdisable_color[m
+            If True, color will not be used when printing messages in the
+            terminal.
+
+         [1mdisable_file_logging[m
+            If True, [1mgcloud[m will not store logs to a file. This may be useful
+            if disk space is limited.
+
+         [1mdisable_prompts[m
+            If True, the default answer will be assumed for all user prompts.
+            However, for any prompts that require user input, an error will be
+            raised. This is equivalent to either using the global [1m--quiet[m flag
+            or setting the environment variable [1mCLOUDSDK_CORE_DISABLE_PROMPTS[m
+            to 1. Setting this property is useful when scripting with [1mgcloud[m.
+
+         [1mdisable_usage_reporting[m
+            If True, anonymous statistics on SDK usage will not be collected.
+            This value is set by default based on your choices during
+            installation, but can be changed at any time. For more information,
+            see: https://cloud.google.com/sdk/usage-statistics
+
+         [1mlog_http[m
+            If True, log HTTP requests and responses to the logs. To see logs
+            in the terminal, adjust [1mverbosity[m settings. Otherwise, logs are
+            available in their respective log files.
+
+         [1mmax_log_days[m
+            Maximum number of days to retain log files before deleting. If set
+            to 0, turns off log garbage collection and does not delete log
+            files. If unset, the default is 30 days.
+
+         [1mpass_credentials_to_gsutil[m
+            If True, pass the configured Cloud SDK authentication to gsutil.
+
+         [1mproject[m
+            Project ID of the Cloud Platform project to operate on by default.
+            This can be overridden by using the global [1m--project[m flag.
+
+         [1mshow_structured_logs[m
+            Control when JSON-structured log messages for the current verbosity
+            level (and above) will be written to standard error. If this
+            property is disabled, logs are formatted as [1mtext[m by default.
+
+            Valid values are:
+            ▸ [1mnever[m - Log messages as text
+            ▸ [1malways[m - Always log messages as JSON
+            ▸ [1mlog[m - Only log messages as JSON if stderr is a file
+            ▸ [1mterminal[m - Only log messages as JSON if stderr is a terminal
+
+    If unset, default is [1mnever[m.
+
+         [1mtrace_token[m
+            Token used to route traces of service requests for investigation of
+            issues. This token will be provided by Google support.
+
+         [1muser_output_enabled[m
+            True, by default. If False, messages to the user and command output
+            on both standard output and standard error will be suppressed.
+
+         [1mverbosity[m
+            Default logging verbosity for [1mgcloud[m commands. This is the
+            equivalent of using the global [1m--verbosity[m flag. Supported
+            verbosity levels: [1mdebug[m, [1minfo[m, [1mwarning[m, [1merror[m, and [1mnone[m.
+
+     [4maccessibility[m
+         [1mscreen_reader[m
+            Make gcloud more screen reader friendly.
+
+     [4mapp[m
+         [1mcloud_build_timeout[m
+            Timeout, in seconds, to wait for Docker builds to complete during
+            deployments. All Docker builds now use the Cloud Build API.
+
+         [1mpromote_by_default[m
+            If True, when deploying a new version of a service, that version
+            will be promoted to receive all traffic for the service. This
+            property can be overridden via the [1m--promote-by-default[m or
+            [1m--no-promote-by-default[m flags.
+
+         [1mstop_previous_version[m
+            If True, when deploying a new version of a service, the previously
+            deployed version is stopped. If False, older versions must be
+            stopped manually.
+
+         [1muse_runtime_builders[m
+            If set, opt in/out to a new code path for building applications
+            using pre-fabricated runtimes that can be updated independently of
+            client tooling. If not set, the default path for each runtime is
+            used.
+
+     [4martifacts[m
+         [1mlocation[m
+            Default location to use when working with Artifact Registry
+            resources. When a [1mlocation[m value is required but not provided, the
+            command will fall back to this value, if set. If this value is
+            unset, the default location is [1mglobal[m when [1mlocation[m value is
+            optional.
+
+         [1mrepository[m
+            Default repository to use when working with Artifact Registry
+            resources. When a [1mrepository[m value is required but not provided,
+            the command will fall back to this value, if set.
+
+     [4mauth[m
+         [1mdisable_credentials[m
+            If True, [1mgcloud[m will not attempt to load any credentials or
+            authenticate any requests. This is useful when behind a proxy that
+            adds authentication to requests.
+
+         [1mimpersonate_service_account[m
+            After setting this property, all API requests will be made as the
+            given service account instead of the currently selected account.
+            This is done without needing to create, download, and activate a
+            key for the account. In order to perform operations as the service
+            account, your currently selected account must have an IAM role that
+            includes the iam.serviceAccounts.getAccessToken permission for the
+            service account. The roles/iam.serviceAccountTokenCreator role has
+            this permission or you may create a custom role.
+
+     [4mbilling[m
+         [1mquota_project[m
+            Project that will be charged quota for the operations performed in
+            [1mgcloud[m. When unset, the default is [CURRENT_PROJECT]; this will
+            charge quota against the currently set project for operations
+            performed on it. Additionally, some existing APIs will continue to
+            use a shared project for quota by default, when this property is
+            unset.
+
+            If you need to operate on one project, but need quota against a
+            different project, you can use this property to specify the
+            alternate project.
+
+     [4mbuilds[m
+         [1mkaniko_cache_ttl[m
+            TTL, in hours, of cached layers when using Kaniko. If zero, layer
+            caching is disabled.
+
+         [1mtimeout[m
+            Timeout, in seconds, to wait for builds to complete. If unset,
+            defaults to 10 minutes.
+
+         [1muse_kaniko[m
+            If True, kaniko will be used to build images described by a
+            Dockerfile, instead of [1mdocker build[m.
+
+     [4mcomponent_manager[m
+         [1madditional_repositories[m
+            Comma separated list of additional repositories to check for
+            components. This property is automatically managed by the [1mgcloud
+            components repositories[m commands.
+
+         [1mdisable_update_check[m
+            If True, Cloud SDK will not automatically check for updates.
+
+     [4mcomposer[m
+         [1mlocation[m
+            Composer location to use. Each Composer location constitutes an
+            independent resource namespace constrained to deploying
+            environments into Compute Engine regions inside this location. This
+            parameter corresponds to the /locations/<location> segment of the
+            Composer resource URIs being referenced.
+
+     [4mcompute[m
+         [1mregion[m
+            Default region to use when working with regional Compute Engine
+            resources. When a [1m--region[m flag is required but not provided, the
+            command will fall back to this value, if set. To see valid choices,
+            run [1mgcloud compute regions list[m.
+
+         [1muse_new_list_usable_subnets_api[m
+            If True, use the new API for listing usable subnets which only
+            returns subnets in the current project.
+
+         [1mzone[m
+            Default zone to use when working with zonal Compute Engine
+            resources. When a [1m--zone[m flag is required but not provided, the
+            command will fall back to this value, if set. To see valid choices,
+            run [1mgcloud compute zones list[m.
+
+     [4mcontainer[m
+         [1mbuild_timeout[m
+            Timeout, in seconds, to wait for container builds to complete.
+
+         [1mcluster[m
+            Name of the cluster to use by default when working with Kubernetes
+            Engine.
+
+         [1muse_application_default_credentials[m
+            If True, use application default credentials to authenticate to the
+            cluster API server.
+
+         [1muse_client_certificate[m
+            If True, use the cluster's client certificate to authenticate to
+            the cluster API server.
+
+     [4mcontext_aware[m
+         [1muse_client_certificate[m
+            If True, use client certificate to authorize user device using
+            Context-aware access. Some services may not support client
+            certificate authorization. If a command sends requests to such
+            services, the client certificate will not be validated. Run [1mgcloud
+            topic client-certificate[m for list of services supporting this
+            feature.
+
+     [4mdataflow[m
+         [1mdisable_public_ips[m
+            Specifies that Cloud Dataflow workers must not use public IP
+            addresses.
+
+         [1mprint_only[m
+            Prints the container spec to stdout. Does not save in Google Cloud
+            Storage.
+
+     [4mdatafusion[m
+         [1mlocation[m
+            Datafusion location to use. Each Datafusion location constitutes an
+            independent resource namespace constrained to deploying
+            environments into Compute Engine regions inside this location. This
+            parameter corresponds to the /locations/<location> segment of the
+            Datafusion resource URIs being referenced.
+
+     [4mdataproc[m
+         [1mregion[m
+            Cloud Dataproc region to use. Each Cloud Dataproc region
+            constitutes an independent resource namespace constrained to
+            deploying instances into Compute Engine zones inside the region.
+
+     [4mdeployment_manager[m
+         [1mglob_imports[m
+            Enable import path globbing. Uses glob patterns to match multiple
+            imports in a config file.
+
+     [4mfilestore[m
+         [1mlocation[m
+            (DEPRECATED) Please use the [1m--location[m flag or set the
+            filestore/zone property.
+
+         [1mzone[m
+            Default zone to use when working with Cloud Filestore zones. When a
+            [1m--zone[m flag is required but not provided, the command will fall
+            back to this value, if set.
+
+     [4mfunctions[m
+         [1mregion[m
+            Default region to use when working with Cloud Functions resources.
+            When a [1m--region[m flag is required but not provided, the command will
+            fall back to this value, if set. To see valid choices, run [1mgcloud
+            beta functions regions list[m.
+
+     [4mgame_services[m
+         [1mdefault_deployment[m
+            Default deployment to use when working with Cloud Game Services
+            list configs. When a --deployment flag is required in a list
+            command but not provided, the command will fall back to this value
+            which envokes aggregated list from the backend.
+
+         [1mdefault_realm[m
+            Default realm to use when working with Cloud Game Services list
+            clusters. When a --realm flag is required in a list command but not
+            provided, the command will fall back to this value which envokes
+            aggregated list from the backend.
+
+         [1mlocation[m
+            Default location to use when working with Cloud Game Services
+            resources. When a [1m--location[m flag is required but not provided, the
+            command will fall back to this value.
+
+     [4mgcloudignore[m
+         [1menabled[m
+            If True, do not upload [1m.gcloudignore[m files (see [1m$ gcloud topic
+            gcloudignore[m). If False, turn off the gcloudignore mechanism
+            entirely and upload all files.
+
+     [4mhealthcare[m
+         [1mdataset[m
+            Default dataset to use when working with Cloud Healthcare
+            resources. When a [1m--dataset[m flag is required but not provided, the
+            command will fall back to this value, if set.
+
+         [1mlocation[m
+            Default location to use when working with Cloud Healthcare
+            resources. When a [1m--location[m flag is required but not provided, the
+            command will fall back to this value.
+
+     [4minteractive[m
+         [1mbottom_bindings_line[m
+            If True, display the bottom key bindings line.
+
+         [1mbottom_status_line[m
+            If True, display the bottom status line.
+
+         [1mcompletion_menu_lines[m
+            Number of lines in the completion menu.
+
+         [1mcontext[m
+            Command context string.
+
+         [1mfixed_prompt_position[m
+            If True, display the prompt at the same position.
+
+         [1mhelp_lines[m
+            Maximum number of help snippet lines.
+
+         [1mhidden[m
+            If True, expose hidden commands/flags.
+
+         [1mjustify_bottom_lines[m
+            If True, left- and right-justify bottom toolbar lines.
+
+         [1mmanpage_generator[m
+            If True, use the manpage CLI tree generator for unsupported
+            commands.
+
+         [1mmulti_column_completion_menu[m
+            If True, display the completions as a multi-column menu.
+
+         [1mprompt[m
+            Command prompt string.
+
+         [1mshow_help[m
+            If True, show help as command args are being entered.
+
+         [1msuggest[m
+            If True, add command line suggestions based on history.
+
+     [4mlifesciences[m
+         [1mlocation[m
+            Default location to use when working with Cloud Life Sciences
+            resources. When a [1m--location[m flag is required but not provided, the
+            command will fall back to this value.
+
+     [4mml_engine[m
+         [1mlocal_python[m
+            Full path to the Python interpreter to use for Cloud ML Engine
+            local predict/train jobs. If not specified, the default path is the
+            one to the Python interpreter found on system [1mPATH[m.
+
+         [1mpolling_interval[m
+            Interval (in seconds) at which to poll logs from your Cloud ML
+            Engine jobs. Note that making it much faster than the default (60)
+            will quickly use all of your quota.
+
+     [4mnotebooks[m
+         [1mlocation[m
+            Default location to use when working with Notebook resources. When
+            a [1mlocation[m value is required but not provided, the command will
+            fall back to this value, if set.
+
+     [4mproxy[m
+         [1maddress[m
+            Hostname or IP address of proxy server.
+
+         [1mpassword[m
+            Password to use when connecting, if the proxy requires
+            authentication.
+
+         [1mport[m
+            Port to use when connected to the proxy server.
+
+         [1mrdns[m
+            If True, DNS queries will not be performed locally, and instead,
+            handed to the proxy to resolve. This is default behavior.
+
+         [1mtype[m
+            Type of proxy being used. Supported proxy types are: [http,
+            http_no_tunnel, socks4, socks5].
+
+         [1musername[m
+            Username to use when connecting, if the proxy requires
+            authentication.
+
+     [4mredis[m
+         [1mregion[m
+            Default region to use when working with Cloud Memorystore for Redis
+            resources. When a [1mregion[m is required but not provided by a flag,
+            the command will fall back to this value, if set.
+
+     [4mrun[m
+         [1mcluster[m
+            ID of the cluster or fully qualified identifier for the cluster
+
+         [1mcluster_location[m
+            Zone or region in which the cluster is located.
+
+         [1mplatform[m
+            Target platform for running commands.
+
+         [1mregion[m
+            Default region to use when working with Cloud Run resources. When a
+            [1m--region[m flag is required but not provided, the command will fall
+            back to this value, if set.
+
+     [4mscc[m
+         [1morganization[m
+            Default organization [1mgcloud[m should use for scc surface.
+
+     [4msecrets[m
+         [1mlocations[m
+            A comma separated list of the locations to replicate secrets to.
+            Only applies to secrets with a user-managed policy.
+
+         [1mreplication-policy[m
+            The type of replication policy to apply to secrets. Allowed values
+            are "automatic" and "user-managed". If user-managed then locations
+            must also be provided.
+
+     [4mspanner[m
+         [1minstance[m
+            Default instance to use when working with Cloud Spanner resources.
+            When an instance is required but not provided by a flag, the
+            command will fall back to this value, if set.
+
+     [4msurvey[m
+         [1mdisable_prompts[m
+            If True, gcloud will not prompt you to take periodic usage
+            experience surveys.
+
+[m[1mEXAMPLES[m
+    To set the project [1mproperty[m in the core section, run:
+
+        $ gcloud config set project myProject
+
+    To set the [1mzone[m property in the [1mcompute[m section, run:
+
+        $ gcloud config set compute/zone asia-east1-b
+
+    To disable prompting for scripting, run:
+
+        $ gcloud config set disable_prompts true
+
+    To set a proxy with the appropriate type, and specify the address and port
+    on which to reach it, run:
+
+        $ gcloud config set proxy/type http
+        $ gcloud config set proxy/address 1.234.56.78
+        $ gcloud config set proxy/port 8080
+
+    For a full list of accepted values, see the Cloud SDK properties page:
+    https://cloud.google.com/sdk/docs/properties
+[m

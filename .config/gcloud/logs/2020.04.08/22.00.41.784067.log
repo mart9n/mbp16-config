@@ -1,0 +1,26 @@
+2020-04-08 22:00:41,804 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute']
+2020-04-08 22:00:41,808 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'firewall_rules']
+2020-04-08 22:00:41,827 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'firewall-rules', u'create']
+2020-04-08 22:00:41,831 DEBUG    root            Running [gcloud.compute.firewall-rules.create] with arguments: [--allow: "[u'tcp:22']", NAME: "default-allow-ssh"]
+2020-04-08 22:00:41,964 INFO     ___FILE_ONLY___ Creating firewall...
+2020-04-08 22:00:42,408 DEBUG    root            (gcloud.compute.firewall-rules.create) Could not fetch resource:
+ - The resource 'projects/geodo-website/global/firewalls/default-allow-ssh' already exists
+Traceback (most recent call last):
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 983, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/surface/compute/firewall_rules/create.py", line 131, in Run
+    request)], progress_tracker=tracker)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/client_adapter.py", line 99, in MakeRequests
+    errors, error_message='Could not fetch resource:')
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/utils.py", line 119, in RaiseToolException
+    RaiseException(problems, calliope_exceptions.ToolException, error_message)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/utils.py", line 131, in RaiseException
+    errors))
+ToolException: Could not fetch resource:
+ - The resource 'projects/geodo-website/global/firewalls/default-allow-ssh' already exists
+
+2020-04-08 22:00:42,413 ERROR    root            (gcloud.compute.firewall-rules.create) Could not fetch resource:
+ - The resource 'projects/geodo-website/global/firewalls/default-allow-ssh' already exists
+

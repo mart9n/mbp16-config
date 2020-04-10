@@ -1,0 +1,25 @@
+2020-04-08 21:33:38,053 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth']
+2020-04-08 21:33:38,058 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth', u'list']
+2020-04-08 21:33:38,060 DEBUG    root            Running [gcloud.auth.list] with arguments: []
+2020-04-08 21:33:38,071 INFO     root            Display format: "    table[title='Credentialed Accounts'](
+        status.yesno(yes='*', no=''):label=ACTIVE,
+        account
+    )"
+2020-04-08 21:33:38,072 INFO     ___FILE_ONLY___    Credentialed Accounts
+2020-04-08 21:33:38,072 INFO     ___FILE_ONLY___ 
+
+2020-04-08 21:33:38,072 INFO     ___FILE_ONLY___ ACTIVE
+2020-04-08 21:33:38,072 INFO     ___FILE_ONLY___   
+2020-04-08 21:33:38,072 INFO     ___FILE_ONLY___ ACCOUNT
+2020-04-08 21:33:38,073 INFO     ___FILE_ONLY___ 
+
+2020-04-08 21:33:38,073 INFO     ___FILE_ONLY___ *
+2020-04-08 21:33:38,073 INFO     ___FILE_ONLY___        
+2020-04-08 21:33:38,073 INFO     ___FILE_ONLY___ realmart9n@gmail.com
+2020-04-08 21:33:38,073 INFO     ___FILE_ONLY___ 
+
+2020-04-08 21:33:38,073 INFO     ___FILE_ONLY___ 
+To set the active account, run:
+    $ gcloud config set account `ACCOUNT`
+
+

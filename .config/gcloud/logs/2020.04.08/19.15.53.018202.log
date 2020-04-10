@@ -1,0 +1,16 @@
+2020-04-08 19:15:53,019 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth']
+2020-04-08 19:15:53,126 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth', u'login']
+2020-04-08 19:15:53,128 DEBUG    root            Running [gcloud.auth.login] with arguments: []
+2020-04-08 19:15:53,300 INFO     ___FILE_ONLY___ Your browser has been opened to visit:
+
+    https://accounts.google.com/o/oauth2/auth?code_challenge=jCU3gau_KTbOogKWhfkw-OEAprdeyQTNOsJrVPJFQq8&prompt=select_account&code_challenge_method=S256&access_type=offline&redirect_uri=http%3A%2F%2Flocalhost%3A8085%2F&response_type=code&client_id=32555940559.apps.googleusercontent.com&scope=openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fappengine.admin+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcompute+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Faccounts.reauth
+
+
+
+2020-04-08 19:16:05,398 INFO     oauth2client.client Successfully retrieved access token
+2020-04-08 19:16:05,407 INFO     ___FILE_ONLY___ 
+You are now logged in as [realmart9n@gmail.com].
+Your current project is [None].  You can change this setting by running:
+  $ gcloud config set project PROJECT_ID
+
+2020-04-08 19:16:05,407 INFO     root            Display format: "none"

@@ -1,0 +1,43 @@
+2020-04-08 22:06:48,246 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute']
+2020-04-08 22:06:48,258 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'config_ssh']
+2020-04-08 22:06:48,260 DEBUG    root            Running [gcloud.compute.config-ssh] with arguments: []
+2020-04-08 22:06:48,665 DEBUG    root            Current SSH keys in project: []
+2020-04-08 22:06:48,666 INFO     ___FILE_ONLY___ Updating project ssh metadata...
+2020-04-08 22:06:49,364 DEBUG    root            Operations to inspect: [<Operation
+ id: 5212000699120058886
+ insertTime: u'2020-04-08T14:06:49.030-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1586380008666-5a2cde0e5341e-2ae370b3-4b4bde26'
+ operationType: u'compute.projects.setCommonInstanceMetadata'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/geodo-website/global/operations/operation-1586380008666-5a2cde0e5341e-2ae370b3-4b4bde26'
+ startTime: u'2020-04-08T14:06:49.034-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 238318476607
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/geodo-website'
+ user: u'realmart9n@gmail.com'
+ warnings: []>]
+2020-04-08 22:07:02,574 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2020-04-08T14:07:02.102-07:00'
+ id: 5212000699120058886
+ insertTime: u'2020-04-08T14:06:49.030-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1586380008666-5a2cde0e5341e-2ae370b3-4b4bde26'
+ operationType: u'compute.projects.setCommonInstanceMetadata'
+ progress: 100
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/geodo-website/global/operations/operation-1586380008666-5a2cde0e5341e-2ae370b3-4b4bde26'
+ startTime: u'2020-04-08T14:06:49.034-07:00'
+ status: StatusValueValuesEnum(DONE, 0)
+ targetId: 238318476607
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/geodo-website'
+ user: u'realmart9n@gmail.com'
+ warnings: []>]
+2020-04-08 22:07:02,575 INFO     ___FILE_ONLY___ Updated [https://www.googleapis.com/compute/v1/projects/geodo-website].
+
+2020-04-08 22:07:03,419 INFO     ___FILE_ONLY___ You should now be able to use ssh/scp with your instances.
+For example, try running:
+
+  $ ssh geodo-webserver.europe-west2-c.geodo-website
+
+
+2020-04-08 22:07:03,420 INFO     root            Display format: "default"

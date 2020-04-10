@@ -1,0 +1,6 @@
+2020-04-08 19:18:56,038 DEBUG    root            Loaded Command Group: [u'gcloud', u'config']
+2020-04-08 19:18:56,043 DEBUG    root            Loaded Command Group: [u'gcloud', u'config', u'set']
+2020-04-08 19:18:56,045 DEBUG    root            Running [gcloud.config.set] with arguments: [SECTION/PROPERTY: "project", VALUE: "geodo-website"]
+2020-04-08 19:18:56,046 INFO     ___FILE_ONLY___ Updated property [core/project].
+
+2020-04-08 19:18:57,002 INFO     root            Display format: "default"

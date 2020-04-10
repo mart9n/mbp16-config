@@ -1,0 +1,58 @@
+2020-04-08 19:15:39,811 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute']
+2020-04-08 19:15:39,815 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'os_login']
+2020-04-08 19:15:39,816 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'os-login', u'ssh_keys']
+2020-04-08 19:15:39,818 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'os-login', u'ssh-keys', u'add']
+2020-04-08 19:15:39,821 DEBUG    root            Running [gcloud.compute.os-login.ssh-keys.add] with arguments: [--key-file: ".sshkeys/geodokey.pub", --ttl: "31536000"]
+2020-04-08 19:15:39,831 DEBUG    root            (gcloud.compute.os-login.ssh-keys.add) Your current active account [realmart9n] does not have any valid credentials
+Please run:
+
+  $ gcloud auth login
+
+to obtain new credentials.
+
+For service account, please activate it first:
+
+  $ gcloud auth activate-service-account ACCOUNT
+Traceback (most recent call last):
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 983, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/surface/compute/os_login/ssh_keys/add.py", line 48, in Run
+    oslogin_client = client.OsloginClient(self.ReleaseTrack())
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/api_lib/oslogin/client.py", line 51, in __init__
+    self.client = _GetClient(version)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/api_lib/oslogin/client.py", line 33, in _GetClient
+    return apis.GetClientInstance('oslogin', version)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/api_lib/util/apis.py", line 325, in GetClientInstance
+    use_google_auth)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/api_lib/util/apis_internal.py", line 165, in _GetClientInstance
+    response_encoding=http_creds.ENCODING, use_google_auth=use_google_auth)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/core/credentials/http.py", line 91, in Http
+    creds = store.LoadIfEnabled(allow_account_impersonation, use_google_auth)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 433, in LoadIfEnabled
+    use_google_auth=use_google_auth)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 506, in Load
+    cred = _Load(account, scopes, prevent_refresh, use_google_auth)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 556, in _Load
+    raise NoCredentialsForAccountException(account)
+NoCredentialsForAccountException: Your current active account [realmart9n] does not have any valid credentials
+Please run:
+
+  $ gcloud auth login
+
+to obtain new credentials.
+
+For service account, please activate it first:
+
+  $ gcloud auth activate-service-account ACCOUNT
+2020-04-08 19:15:39,832 ERROR    root            (gcloud.compute.os-login.ssh-keys.add) Your current active account [realmart9n] does not have any valid credentials
+Please run:
+
+  $ gcloud auth login
+
+to obtain new credentials.
+
+For service account, please activate it first:
+
+  $ gcloud auth activate-service-account ACCOUNT

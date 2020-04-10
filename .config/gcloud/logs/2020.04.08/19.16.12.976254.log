@@ -1,0 +1,32 @@
+2020-04-08 19:16:12,996 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute']
+2020-04-08 19:16:13,000 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'os_login']
+2020-04-08 19:16:13,001 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'os-login', u'ssh_keys']
+2020-04-08 19:16:13,003 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'os-login', u'ssh-keys', u'add']
+2020-04-08 19:16:13,005 DEBUG    root            Running [gcloud.compute.os-login.ssh-keys.add] with arguments: [--key-file: ".sshkeys/geodokey.pub", --ttl: "31536000"]
+2020-04-08 19:16:13,204 DEBUG    root            (gcloud.compute.os-login.ssh-keys.add) INVALID_ARGUMENT: Project ID must be specified.
+Traceback (most recent call last):
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 983, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/surface/compute/os_login/ssh_keys/add.py", line 55, in Run
+    expiration_time=expiry)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/api_lib/oslogin/client.py", line 126, in ImportSshPublicKey
+    res = self.client.users.ImportSshPublicKey(message)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/googlecloudsdk/third_party/apis/oslogin/v1/oslogin_v1_client.py", line 223, in ImportSshPublicKey
+    config, request, global_params=global_params)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 731, in _RunMethod
+    return self.ProcessHttpResponse(method_config, http_response, request)
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 737, in ProcessHttpResponse
+    self.__ProcessHttpResponse(method_config, http_response, request))
+  File "/Users/martinkirilov/Downloads/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 604, in __ProcessHttpResponse
+    http_response, method_config=method_config, request=request)
+HttpBadRequestError: HttpError accessing <https://oslogin.googleapis.com/v1/users/realmart9n@gmail.com:importSshPublicKey?alt=json>: response: <{'status': '400', 'content-length': '119', 'x-xss-protection': '0', 'x-content-type-options': 'nosniff', 'transfer-encoding': 'chunked', 'vary': 'Origin, X-Origin, Referer', 'server': 'ESF', '-content-encoding': 'gzip', 'cache-control': 'private', 'date': 'Wed, 08 Apr 2020 18:16:13 GMT', 'x-frame-options': 'SAMEORIGIN', 'alt-svc': 'quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,h3-T050=":443"; ma=2592000', 'content-type': 'application/json; charset=UTF-8'}>, content <{
+  "error": {
+    "code": 400,
+    "message": "Project ID must be specified.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+>
+2020-04-08 19:16:13,206 ERROR    root            (gcloud.compute.os-login.ssh-keys.add) INVALID_ARGUMENT: Project ID must be specified.

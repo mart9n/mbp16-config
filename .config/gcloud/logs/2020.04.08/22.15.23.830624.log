@@ -1,0 +1,4 @@
+2020-04-08 22:15:23,850 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute']
+2020-04-08 22:15:23,862 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'config_ssh']
+2020-04-08 22:15:23,865 DEBUG    root            Running [gcloud.compute.config-ssh] with arguments: [--remove: "True"]
+2020-04-08 22:15:23,994 INFO     root            Display format: "default"

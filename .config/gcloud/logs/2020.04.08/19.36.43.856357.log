@@ -1,0 +1,5 @@
+2020-04-08 19:36:43,877 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute']
+2020-04-08 19:36:43,881 ERROR    root            (gcloud.compute) unrecognized arguments: --zone 
+
+To search the help text of gcloud commands, run:
+  gcloud help -- SEARCH_TERMS

@@ -1,0 +1,44 @@
+2020-04-08 21:48:08,901 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute']
+2020-04-08 21:48:08,913 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'config_ssh']
+2020-04-08 21:48:08,915 DEBUG    root            Running [gcloud.compute.config-ssh] with arguments: []
+2020-04-08 21:48:09,039 DEBUG    root            SSH Config File [/Users/martinkirilov/.ssh/config] could not be opened: Unable to read file [/Users/martinkirilov/.ssh/config]: [Errno 2] No such file or directory: '/Users/martinkirilov/.ssh/config'
+2020-04-08 21:48:09,442 DEBUG    root            Current SSH keys in project: [u'realmart9n:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAFr186SeFbeelEZS1WL8HY5U3HSodfSiUDMv+A2G9MmXpqDIdphS5kPeUbjEKwjBTs0tHDgXaDlUOW+XPnCXVPcKz7papKA/YzZBJYRAhLrbqN5GZLbzP/T6FcuJ6s3bcrwytpZ4gwFKIcoGBZpsYwK3zx44xwzYvyIOfkyX/vDh7Pq3Xl31q3OVKDhLiycn+njUmTQ5hziIsfxkocseriEax6W4V44x4XMOTrfXgUa3KZsbTD1YUbc+DroCLSb2gXAEUGudLAlVJEuF+xG8L5/KbzsR/VFJHbdN/StemrZ7iauVktXvZdFr7sF0WNr0U226FQYx7/Amy8qm7tDJYKE= google-ssh {"userName":"realmart9n@gmail.com","expireOn":"2020-04-08T17:57:13+0000"}', u'realmart9n:ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHCnCcPKsyOK+F+B/Vk4n2YNBGktxer/t99fVbBcKw6LQC2itfJaODOlNY89rhcuS5iVtfougA0HL+TDi+gFtXc= google-ssh {"userName":"realmart9n@gmail.com","expireOn":"2020-04-08T17:57:11+0000"}']
+2020-04-08 21:48:09,444 INFO     ___FILE_ONLY___ Updating project ssh metadata...
+2020-04-08 21:48:10,564 DEBUG    root            Operations to inspect: [<Operation
+ id: 6010451431732250213
+ insertTime: u'2020-04-08T13:48:10.082-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1586378889415-5a2cd9e2ec9dc-f36adf09-847b41a9'
+ operationType: u'compute.projects.setCommonInstanceMetadata'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/geodo-website/global/operations/operation-1586378889415-5a2cd9e2ec9dc-f36adf09-847b41a9'
+ startTime: u'2020-04-08T13:48:10.086-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 238318476607
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/geodo-website'
+ user: u'realmart9n@gmail.com'
+ warnings: []>]
+2020-04-08 21:48:24,695 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2020-04-08T13:48:24.373-07:00'
+ id: 6010451431732250213
+ insertTime: u'2020-04-08T13:48:10.082-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1586378889415-5a2cd9e2ec9dc-f36adf09-847b41a9'
+ operationType: u'compute.projects.setCommonInstanceMetadata'
+ progress: 100
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/geodo-website/global/operations/operation-1586378889415-5a2cd9e2ec9dc-f36adf09-847b41a9'
+ startTime: u'2020-04-08T13:48:10.086-07:00'
+ status: StatusValueValuesEnum(DONE, 0)
+ targetId: 238318476607
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/geodo-website'
+ user: u'realmart9n@gmail.com'
+ warnings: []>]
+2020-04-08 21:48:24,696 INFO     ___FILE_ONLY___ Updated [https://www.googleapis.com/compute/v1/projects/geodo-website].
+
+2020-04-08 21:48:25,442 INFO     ___FILE_ONLY___ You should now be able to use ssh/scp with your instances.
+For example, try running:
+
+  $ ssh geodo-webserver.europe-west2-c.geodo-website
+
+
+2020-04-08 21:48:25,443 INFO     root            Display format: "default"
